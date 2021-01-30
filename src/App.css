@@ -36,14 +36,3 @@
         transform: rotate(360deg);
     }
 }
-
-.tarjetaFruta {
-    background-color: aqua;
-    border: solid 1px blueviolet;
-    color: #282c34;
-}
-
-.tarjetaFruta activa {
-    background: linear-gradient(45deg, black, blue);
-    color: white;
-}

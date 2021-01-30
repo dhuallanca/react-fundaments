@@ -1,34 +1,13 @@
 import React from 'react';
 import './App.css';
+import TarjetaFruta from './tarjeta-fruta/tarjetaFruta'
 
-class TarjetaFruta extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      cantidad: 0,
-    }
-
-  }
-  agregar = ()=> {
-      this.setState({ cantidad: this.state.cantidad +1 })
-  };
-  restar() {
-      this.setState({ cantidad: this.state.cantidad -1 })
-  };
+class App extends React.Component {
   render() {
-    const hasItems = this.state.cantidad > 0;
-    const classes = `tarjetaFruta ${hasItems? 'activa': ''}`
     return (
-      <div className={classes}>
-        <h3> {this.props.name}</h3>
-        <p>cantidad: {this.state.cantidad}</p>
-        <button onClick={this.agregar}>Agregar</button>
-         <button onClick={this.restar.bind(this)}>Agregar</button>
-        <hr></hr>
-        <p>Precio: ${this.props.price}</p>
-      </div>
-    );
+      <TarjetaFruta name={'Dennis'} price={50.5}/>
+    )
   }
 }
 
-export default TarjetaFruta;
+export default App;

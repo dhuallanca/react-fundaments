@@ -1,0 +1,10 @@
+.tarjetaFruta {
+    background: azure;
+    border: solid 1px blueviolet;
+    color: #282c34;
+}
+
+.activa {
+    background: linear-gradient(45deg, black, blue);
+    color: white;
+}
