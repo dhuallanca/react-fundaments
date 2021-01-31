@@ -1,5 +1,4 @@
 import React from 'react';
-
 class Contador extends React.Component {
   state = {
     clicks: 0,
@@ -40,6 +39,7 @@ class Contador extends React.Component {
   };
 
   render() {
+   
     return (
     <>
       <div>

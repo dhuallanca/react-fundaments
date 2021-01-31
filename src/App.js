@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import TarjetaFruta from './tarjeta-fruta'
 import Contador from './contador'
+import Gato from './gato'
 import {
   Route,
   Link
@@ -10,6 +11,10 @@ import {
 class App extends React.Component {
   
   render() {
+    const OtrosDatos = {
+      raza: 'Tropical',
+      peso: '10kg'
+    }
     return (
       <div>
         <nav className="navbar navbar-light">
@@ -18,10 +23,10 @@ class App extends React.Component {
               <Link to="/">Tarjeta Fruta</Link>
             </li>
             <li>
-              <Link to="/contador">Contador</Link>
+              <Link to="/contador">Manejar Estados</Link>
             </li>
             <li>
-              <Link to="/products">Products</Link>
+              <Link to="/gato">Uso de Props</Link>
             </li>
           </ul>
         </nav>
@@ -29,7 +34,7 @@ class App extends React.Component {
         { /* Route components are rendered if the path prop matches the current URL */}
         <Route exact path="/"><TarjetaFruta name={'Dennis'} price={50.5}></TarjetaFruta></Route>
         <Route path="/contador"><Contador /></Route>
-        <Route path="/products"></Route>
+        <Route path="/gato"><Gato name={'Garfield'} edad='2 años' {...OtrosDatos}></Gato></Route>
       </div>
     );
   }
