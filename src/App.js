@@ -4,6 +4,7 @@ import TarjetaFruta from './tarjeta-fruta'
 import Contador from './contador'
 import Gato from './gato'
 import Eventos from './evento-padre-hijo'
+import InputControlado from './input-controlado'
 import {
   Route,
   Link
@@ -32,6 +33,9 @@ class App extends React.Component {
              <li>
               <Link to="/eventos">Uso de eventos entre componentes</Link>
             </li>
+            <li>
+              <Link to="/inputsControlados">Uso de inputs controlados</Link>
+            </li>
           </ul>
         </nav>
 
@@ -40,6 +44,7 @@ class App extends React.Component {
         <Route path="/contador"><Contador /></Route>
         <Route path="/props"><Gato name={'Garfield'} edad='2 años' {...OtrosDatos}></Gato></Route>
         <Route path="/eventos"><Eventos /></Route>
+        <Route path="/inputsControlados"><InputControlado /></Route>
       </div>
     );
   }
