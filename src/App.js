@@ -5,7 +5,7 @@ import Contador from './contador'
 import Gato from './gato'
 import Eventos from './evento-padre-hijo'
 import InputControlado from './input-controlado'
-import {ManejoHttp, BuscadorHttp } from './peticion-http';
+import {ManejoHttp, BuscadorHttp, ManejoAxios } from './peticion-http';
 import {
   Route,
   Link
@@ -41,6 +41,8 @@ class App extends React.Component {
               <Link to="/manejoHtpp">Peticiones http</Link>
               <br></br>
               <Link to="/buscadorHtpp">Buscador http</Link>
+              <br></br>
+              <Link to="/buscadorAxiosHtpp">Buscador con Axios</Link>
             </li>
           </ul>
         </nav>
@@ -53,6 +55,7 @@ class App extends React.Component {
         <Route path="/inputsControlados"><InputControlado /></Route>
         <Route path="/manejoHtpp"><ManejoHttp></ManejoHttp></Route>
         <Route path="/buscadorHtpp"><BuscadorHttp></BuscadorHttp></Route>
+        <Route path="/buscadorAxiosHtpp"><ManejoAxios></ManejoAxios></Route>
       </div>
     );
   }
