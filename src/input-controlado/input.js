@@ -16,7 +16,7 @@ class InputControlado extends React.Component {
     this.setState({ technology: event.target.value });
   };
   handleCheck = (event) => {
-    this.setState({ termsAccepted: event.target.checked });
+    this.setState({ ...this.state, termsAccepted: event.target.checked });
   }
   render() {
     const inputStyles = {
