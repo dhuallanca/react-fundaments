@@ -1,4 +1,4 @@
 {
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "files.defaultLanguage": "javascriptreact"
+  "files.defaultLanguage": "javascriptreact, javascript"
 }

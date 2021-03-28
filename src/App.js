@@ -5,7 +5,9 @@ import Contador from './contador'
 import Gato from './gato'
 import Eventos from './evento-padre-hijo'
 import InputControlado from './input-controlado'
-import {ManejoHttp, BuscadorHttp, ManejoAxios } from './peticion-http';
+import { ManejoHttp, BuscadorHttp, ManejoAxios } from './peticion-http';
+import Header from './comunicacion-instancia';
+import ContadorUseState from './hooks/use-state/contador'
 import {
   Route,
   Link
@@ -44,6 +46,16 @@ class App extends React.Component {
               <br></br>
               <Link to="/buscadorAxiosHtpp">Buscador con Axios</Link>
             </li>
+            <li>
+              <Link to="/comunicacionInstancia">Comunicación entre componentes con instancia</Link>
+            </li>
+            <li>
+              hooks
+              <ol>
+                <Link to="/useState">Use State</Link>
+              </ol>
+              
+            </li>
           </ul>
         </nav>
 
@@ -56,6 +68,8 @@ class App extends React.Component {
         <Route path="/manejoHtpp"><ManejoHttp></ManejoHttp></Route>
         <Route path="/buscadorHtpp"><BuscadorHttp></BuscadorHttp></Route>
         <Route path="/buscadorAxiosHtpp"><ManejoAxios></ManejoAxios></Route>
+        <Route path="/comunicacionInstancia"><Header></Header></Route>
+        <Route path="/useState"><ContadorUseState></ContadorUseState></Route>
       </div>
     );
   }
