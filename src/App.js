@@ -11,6 +11,7 @@ import ContadorUseState from './hooks/use-state/contador'
 import ContadorUseEffect from './hooks/use-effect/ContadorUseEffect'
 import ContadorUseContext from './hooks/use-context/contador-useContext';
 import IncrementarUseReducer from './hooks/use-reducer/incremento-use-reducer';
+import ComponentUseCallback from './hooks/use-callback/use-callback';
 import {
   Route,
   Link
@@ -71,6 +72,9 @@ class App extends React.Component {
                 <ol>
                   <Link to="/useReducer">Use Reducer</Link>
                 </ol>
+                <ol>
+                  <Link to="/useCallback">Use Callbak, Use Memo</Link>
+                </ol>
               </li>
             </ul>
           </nav>
@@ -115,6 +119,9 @@ class App extends React.Component {
           </Route>
           <Route path="/useReducer">
             <IncrementarUseReducer></IncrementarUseReducer>
+          </Route>
+          <Route path="/useCallback">
+            <ComponentUseCallback></ComponentUseCallback>
           </Route>
         </div>
       </>
