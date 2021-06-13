@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useState } from 'react';
 import Header from '../../header/header';
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
-const ButtonCallBack = useMemo(({onClickCallback, children}) => {
+const ButtonCallBack = React.memo(({onClickCallback, children}) => {
  const getRamdomColor = () => '#' + Math.random().toString(16).slice(2, 8);
   const styleButton = {
     padding: '1rem',
@@ -26,7 +26,8 @@ const ComponentUseCallback = () => {
   // el callback solo se usa cuando se actualiza la propiedad contador
   const incrementarB = useCallback(() => {
     setContadorB((state) => state + contador);
-  }, [contador])
+  }, [contador]);
+
   return (
     <div>
       <Header>Use Callback and use Memo</Header>

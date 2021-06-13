@@ -12,10 +12,12 @@ import ContadorUseEffect from './hooks/use-effect/ContadorUseEffect'
 import ContadorUseContext from './hooks/use-context/contador-useContext';
 import IncrementarUseReducer from './hooks/use-reducer/incremento-use-reducer';
 import ComponentUseCallback from './hooks/use-callback/use-callback';
+import CustomHook from './hooks/custom-hook';
 import {
   Route,
   Link
 } from "react-router-dom";
+import Parent from './prop-children';
 
 class App extends React.Component {
 
@@ -36,7 +38,13 @@ class App extends React.Component {
                 <Link to="/contador">Manejar Estados</Link>
               </li>
               <li>
-                <Link to="/props">Uso de Props</Link>
+                Uso de Props
+                <ol>
+                  <Link to="/props">Uso de Props</Link>
+                </ol>
+                <ol>
+                  <Link to="/propChildren">Children Props</Link>
+                </ol>
               </li>
               <li>
                 <Link to="/eventos">Uso de eventos entre componentes</Link>
@@ -74,6 +82,9 @@ class App extends React.Component {
                 </ol>
                 <ol>
                   <Link to="/useCallback">Use Callbak, Use Memo</Link>
+                </ol>
+                <ol>
+                  <Link to='/useCustom'> Use custom hooks</Link>
                 </ol>
               </li>
             </ul>
@@ -122,6 +133,17 @@ class App extends React.Component {
           </Route>
           <Route path="/useCallback">
             <ComponentUseCallback></ComponentUseCallback>
+          </Route>
+          <Route path='/useCustom'>
+            <CustomHook></CustomHook>
+          </Route>
+          <Route path='/propChildren'>
+            <Parent>
+              Pasando datos como children
+               {() => { }}
+              {`La suma es ${5 + 5}`}
+              {150.25}
+            </Parent>
           </Route>
         </div>
       </>

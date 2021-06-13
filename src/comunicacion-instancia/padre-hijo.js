@@ -5,6 +5,7 @@ const Header = () => {
   const hijo = React.createRef();
   const handleClick = () => {
     console.log('hijo', hijo);
+    // usa las propiedades del hijo usando el current
     hijo.current.dispatchAlert(null, 'Ejecutado desde el padre');
   }
     return (
